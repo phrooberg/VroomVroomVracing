@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cs7m7lrxxaau5"]
+
+[ext_resource type="Texture2D" uid="uid://csyvp1ic7dc7v" path="res://traffic_system/grid_traffic_lanes_2.png" id="1_rj586"]
+[ext_resource type="Script" uid="uid://dim7o3m2th3fv" path="res://traffic_system/destmap_traffic.gd" id="3_0hol4"]
+[ext_resource type="PackedScene" uid="uid://c7mbacrddhscq" path="res://traffic_system/test_car.tscn" id="3_epypp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_di4bf"]
+line_spacing = 1.0
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1384672087]
+
+[node name="Traffic System" type="Sprite2D" parent="." unique_id=1731398957 node_paths=PackedStringArray("info_txt_box")]
+texture_filter = 1
+position = Vector2(64, 32)
+texture = ExtResource("1_rj586")
+script = ExtResource("3_0hol4")
+info_txt_box = NodePath("../Camera2D/Label")
+base_texture = ExtResource("1_rj586")
+test_car_tscn = ExtResource("3_epypp")
+N_test_cars = 400
+followed_car = 0
+N_maps = 10
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1560343801]
+position = Vector2(65, 32)
+zoom = Vector2(8.795, 8.795)
+
+[node name="Label" type="Label" parent="Camera2D" unique_id=81537534]
+texture_filter = 1
+offset_left = -65.0
+offset_top = -36.0
+offset_right = 21.0
+offset_bottom = 11.0
+scale = Vector2(0.23, 0.23)
+offset_transform_position = Vector2(-37.66, -21.285)
+offset_transform_scale = Vector2(0.135, 0.135)
+text = "delta ms
+destmap: 0"
+label_settings = SubResource("LabelSettings_di4bf")

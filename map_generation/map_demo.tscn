@@ -1,9 +1,9 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" path="res://map_generation/map_demo.gd" id="1_demo"]
-[ext_resource type="Script" path="res://map_generation/map_generator.gd" id="2_map"]
-[ext_resource type="Script" path="res://map_generation/race_generator.gd" id="3_race"]
-[ext_resource type="Texture2D" path="res://grid_traffic_lanes_2.png" id="4_png"]
+[ext_resource type="Script" uid="uid://8r00xgkaxt7u" path="res://map_generation/map_demo.gd" id="1_demo"]
+[ext_resource type="Script" uid="uid://coib7nyyy8scq" path="res://map_generation/map_generator.gd" id="2_map"]
+[ext_resource type="Script" uid="uid://c6cf6tv55ac57" path="res://map_generation/race_generator.gd" id="3_race"]
+[ext_resource type="Texture2D" uid="uid://csyvp1ic7dc7v" path="res://traffic_system/grid_traffic_lanes_2.png" id="4_png"]
 
 [sub_resource type="Environment" id="env"]
 background_mode = 1

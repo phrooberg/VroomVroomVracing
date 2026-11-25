@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csyvp1ic7dc7v"
-path="res://.godot/imported/grid_traffic_lanes_2.png-73d80df7cf0e9c520f2891f3fba5ee2b.ctex"
+uid="uid://mvq7yjwqwxii"
+path="res://.godot/imported/Roundabout.png-008e1a333e9d33936a9f3a08e5efefe7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://grid_traffic_lanes_2.png"
-dest_files=["res://.godot/imported/grid_traffic_lanes_2.png-73d80df7cf0e9c520f2891f3fba5ee2b.ctex"]
+source_file="res://traffic_system/Roundabout.png"
+dest_files=["res://.godot/imported/Roundabout.png-008e1a333e9d33936a9f3a08e5efefe7.ctex"]
 
 [params]
 
