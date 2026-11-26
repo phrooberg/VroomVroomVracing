@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="Texture2D" uid="uid://c6igtorq1bnqq" path="res://test_texture.png" id="1_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://cit5kj8rbqphf" path="res://car_base.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://ja8u36683giq" path="res://vehicles/ui.gd" id="3_h2yge"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2f3fp"]
+size = Vector3(10000, 2, 10000)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h2yge"]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_0xm2m")
+uv1_scale = Vector3(1000, 1000, 1000)
+texture_filter = 4
+stencil_flags = 2
+
+[sub_resource type="BoxMesh" id="BoxMesh_2f3fp"]
+size = Vector3(10000, 2, 10000)
+
+[node name="Node" type="Node" unique_id=1200938433]
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1921288750]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground" unique_id=1984148415]
+shape = SubResource("BoxShape3D_2f3fp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Ground" unique_id=1026545038]
+material_override = SubResource("StandardMaterial3D_h2yge")
+mesh = SubResource("BoxMesh_2f3fp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=232883047]
+transform = Transform3D(1, 0, 0, 0, -2.9802326e-08, 1, 0, -1, -2.9802326e-08, 88, 88, 0)
+shadow_enabled = true
+
+[node name="CarBase" parent="." unique_id=340126786 instance=ExtResource("1_ig7tw")]
+
+[node name="Label" type="Label" parent="." unique_id=615479561]
+offset_left = 517.0
+offset_top = 47.0
+offset_right = 580.0
+offset_bottom = 70.0
+script = ExtResource("3_h2yge")
